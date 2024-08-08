@@ -1,4 +1,4 @@
-2024-06-08 12:24:48,780 Exception on /maya/profile [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
+2024-07-16 17:24:36,712 Exception on /request-password-reset [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
 Traceback (most recent call last):
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,28 +8,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/routes.py", line 71, in profile
-    error_out=False)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/base.html", line 68, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 43, in block 'content'
-    {{ form.hidden_tag() }}
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2024-06-08 12:25:05,190 Exception on /maya/profile [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
+  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter14_working_with_emails/app/routes.py", line 181, in request_password_reset
+    return render_template(
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: request_password_reset.html
+2024-07-16 17:24:37,053 Exception on /request-password-reset [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
 Traceback (most recent call last):
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
     response = self.full_dispatch_request()
@@ -39,28 +35,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/routes.py", line 71, in profile
-    error_out=False)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/base.html", line 68, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 43, in block 'content'
-    {{ form.hidden_tag() }}
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2024-06-08 12:31:32,808 Exception on /maya/profile [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
+  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter14_working_with_emails/app/routes.py", line 181, in request_password_reset
+    return render_template(
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: request_password_reset.html
+2024-07-16 17:25:18,412 Exception on /request-password-reset [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
 Traceback (most recent call last):
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
     response = self.full_dispatch_request()
@@ -70,28 +62,26 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/routes.py", line 71, in profile
-    error_out=False)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/base.html", line 68, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 43, in block 'content'
-    {{ form.hidden_tag() }}
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2024-06-08 12:31:39,404 Exception on /maya/profile [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
+  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter14_working_with_emails/app/routes.py", line 181, in request_password_reset
+    return render_template(
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: request_password_reset.html
+2024-07-16 17:32:45,915 Tinker Full-Stack App [in /mnt/c/Users/user/Desktop/Folders/software_development/chapter14_working_with_emails/app/__init__.py:51]
+2024-07-16 17:36:35,866 Tinker Full-Stack App [in /mnt/c/Users/user/Desktop/Folders/software_development/chapter14_working_with_emails/app/__init__.py:51]
+2024-07-16 17:37:03,269 Exception on /request-password-reset [GET] [in /home/mokeira/.local/lib/python3.8/site-packages/flask/app.py:828]
 Traceback (most recent call last):
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
     response = self.full_dispatch_request()
@@ -101,24 +91,20 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/mokeira/.local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/routes.py", line 71, in profile
-    error_out=False)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/base.html", line 68, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter_13_pagination/app/templates/profile.html", line 43, in block 'content'
-    {{ form.hidden_tag() }}
-  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
+  File "/mnt/c/Users/user/Desktop/Folders/software_development/chapter14_working_with_emails/app/routes.py", line 180, in request_password_reset
+    return render_template(
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/mokeira/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/mokeira/.local/lib/python3.8/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: request_password_reset.html
